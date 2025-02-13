@@ -24,14 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const music = document.getElementById("bg-music");
 
+
+    updateVolume(0.5); 
+
     function playMusic() {
         music.play().catch(error => console.log("Music error:", error));
         document.removeEventListener("click", playMusic);
     }
 
     document.addEventListener("click", playMusic);
+
     function updateVolume(newValue) {
-        document.getElementById("bg-music").volume = newValue;
-      }
-      
+        music.volume = newValue; 
+    }
 });
