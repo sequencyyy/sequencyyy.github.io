@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const music = document.getElementById("bg-music");
 
 
-    updateVolume(0.5); 
+    updateVolume(0.25); 
 
     function playMusic() {
         music.play().catch(error => console.log("Music error:", error));
